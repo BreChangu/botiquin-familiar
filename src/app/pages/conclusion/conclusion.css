@@ -1,0 +1,185 @@
+/* src/app/pages/conclusion/conclusion.css (ESTILOS FINALES Y REFORZADOS) */
+
+.page-card {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+h2 {
+    color: #e91e63;
+    font-weight: 800;
+}
+
+h3 {
+    color: #07925d;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-weight: 700;
+    color: #444;
+}
+
+/* --- BLOQUE: Resumen del Viaje (3 Cards) --- */
+
+.summary-points-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* 1. Estilo para la tarjeta contenedora */
+.summary-card {
+    max-width: 280px;
+    min-height: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05) !important; /* Sombra sutil */
+}
+
+.summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 2. Estilo para el contenido dentro de la tarjeta */
+.summary-card mat-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px; /* Padding interno */
+}
+
+/* 3. Estilo para los iconos grandes */
+.summary-card mat-icon {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+/* --- Estilo para el Bloque de Compromiso Final --- */
+.final-commitment {
+    padding: 30px;
+    margin-top: 40px;
+    background-color: #f7f7f7; 
+    border-radius: 12px;
+    border: 1px dashed #ccc; 
+    text-align: center;
+}
+.commitment-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Estilo para la Nota Personal del Psicólogo --- */
+.companion-note-card {
+    margin: 40px auto;
+    max-width: 600px;
+    background-color: #f0f8ff !important;
+    border-left: 6px solid #07925d;
+    border-radius: 12px !important;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.companion-note-card h4 {
+    color: #07925d; 
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.companion-note-card cite {
+    display: block;
+    text-align: right;
+    font-weight: 600;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* --- Estilos para el Anclaje Interactivo --- */
+.daily-anchor-card {
+    margin: 30px auto;
+    max-width: 500px;
+    background-color: #e0f2f1 !important;
+    border: 2px solid #07925d;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.anchor-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #333;
+    min-height: 50px;
+    margin: 15px 0 25px 0;
+}
+
+/* --- Estilos para la SECCIÓN DE APOYO INMEDIATO (Botón de Crisis) --- */
+.immediate-support-section {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.crisis-button {
+    background-color: #ff3333 !important;
+    color: white !important;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 51, 51, 0.4);
+    animation: pulse 1.5s infinite;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crisis-number {
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+/* --- Estilos para la SECCIÓN DE PROFUNDIZACIÓN --- */
+.resource-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.resource-card.interactive {
+    max-width: 320px;
+    min-height: 150px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.resource-action-text {
+    display: block;
+    text-align: right;
+    font-weight: 500;
+    color: #e91e63;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+.section-separator {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(150, 150, 150, 0.75), rgba(0, 0, 0, 0));
+  margin: 40px 0;
+}

@@ -1,0 +1,37 @@
+/* src/app/app.css */
+
+.app-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* src/app/app.css */
+
+/* ... (los otros estilos .app-container, .app-content, etc. se quedan igual) ... */
+
+.app-sidenav {
+  width: 240px;
+  
+  /* --- NUEVOS ESTILOS --- */
+  /* Un fondo blanco-hueso, menos estéril que el blanco puro */
+  background-color: #fcfcfc; 
+  
+  /* Un borde más suave y sutil */
+  border-right: 1px solid #f0f0f0;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Esta es la clase que empuja el footer hacia abajo */
+.main-content-area {
+  flex: 1 0 auto;
+}

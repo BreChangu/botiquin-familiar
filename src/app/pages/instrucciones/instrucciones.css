@@ -1,0 +1,321 @@
+/* src/app/pages/instrucciones/instrucciones.css (Estilos del Checklist) */
+
+/* Estilos para la Tarjeta del Checklist */
+.checklist-card {
+    margin-top: 30px;
+    padding: 20px !important;
+    background-color: #f7f7f7 !important; /* Fondo gris muy claro */
+    border-radius: 12px !important;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 25px;
+    text-align: center;
+    
+}
+
+.checklist-card h3 {
+    color: #e91e63; /* Tu color rosa para el título del checklist */
+    margin-bottom: 5px;
+    font-size: 1.6rem;
+}
+
+/* Estilos de la Barra de Progreso y Mensaje */
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.progress-info .completion-message {
+    color: #07925d; /* Tu color verde para el mensaje de finalización */
+    font-weight: 700;
+}
+
+.checklist {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+/* Estilos para los checkboxes */
+.checklist mat-checkbox {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    text-align: left;
+    color: #444;
+}
+
+/* Estilos para la barra de progreso */
+mat-progress-bar {
+    height: 8px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.section-separator {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(150, 150, 150, 0.75), rgba(0, 0, 0, 0));
+  margin: 40px 0;
+}
+
+
+/* src/app/pages/instrucciones/instrucciones.css (Estilos Estructurales) */
+
+/* Estilo para el título principal H2 (El que dice "Instrucciones de Uso:...") */
+.page-card h2 {
+    color: #e91e63; /* Pink/Rose accent color */
+    font-weight: 800; /* Extra bold */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Estilo para los títulos de las reglas (H3) */
+.regla-titulo {
+    color: #07925d; /* Green accent color */
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para las listas del contenido */
+.reglas-oro ul {
+    list-style-type: none; /* Remueve el punto negro */
+    padding-left: 10px;
+}
+
+.reglas-oro ul li {
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 8px;
+    /* Borde lateral sutil para mantener el toque de diseño */
+    border-left: 3px solid #fce4ec; 
+    padding-left: 15px;
+}
+
+
+
+
+/*Estilos de video 
+/* src/app/pages/instrucciones/instrucciones.css (Nuevos estilos para Video y Tips Expandidos) */
+
+/* Sección de Video */
+.video-section {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.video-section h3 {
+    color: #e91e63;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 700px; /* Ancho máximo para el video */
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Estilos mejorados para las Reglas de Oro */
+/* src/app/pages/instrucciones/instrucciones.css (Estilos para el Acordeón) */
+
+.reglas-acordeon {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.reglas-acordeon h3 {
+    color: #e91e63;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.regla-panel {
+    margin-bottom: 10px;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.regla-panel-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #07925d; /* Color verde para el título de la regla */
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para el círculo numerado (El 1., 2., 3.) */
+.step-number {
+    background-color: #e91e63; /* Color rosa para el número */
+    color: white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+/* Estilos para el contenido del panel */
+.regla-panel p {
+    line-height: 1.6;
+}
+
+.regla-panel ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.regla-panel ul li {
+    padding-left: 15px;
+    margin-bottom: 8px;
+    border-left: 3px solid #ffc107; /* Borde amarillo para los tips/herramientas */
+    font-weight: 500;
+}
+
+/* Ajuste necesario para la compatibilidad de Material */
+::ng-deep .mat-expansion-panel-header-title {
+    align-items: center !important;
+}
+
+/* --- Sección de Tips Adicionales --- */
+.extra-tips-card {
+    margin-top: 30px;
+    padding: 20px !important;
+    background-color: #f0f8ff !important; /* Un azul muy claro para diferenciar */
+    border-left: 6px solid #2196f3; /* Borde azul */
+    border-radius: 12px !important;
+}
+
+.extra-tips-card h3 {
+    color: #2196f3; /* Azul para el título de tips */
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.toggle-tips-button {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 350px;
+    background-color: #2196f3 !important; /* Azul para el botón */
+    color: white !important;
+    font-weight: 600;
+}
+
+.extra-tips-content {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #c7e0ff; /* Borde suave para los tips */
+}
+
+.extra-tips-content h4 {
+    color: #07925d; /* Verde para los subtítulos */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.extra-tips-content ul {
+    list-style: square; /* Estilo de lista para tips */
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.extra-tips-content ul li {
+    color: #444;
+    margin-bottom: 8px;
+}
+
+
+
+/*Kit de herramientas de estilos reutilizables*/
+/* src/app/pages/instrucciones/instrucciones.css (Estilos para el Kit de Reseteo) */
+
+.reset-toolkit-card {
+    margin-top: 30px;
+    padding: 20px !important;
+    background-color: #ffebee !important; /* Fondo rojo/rosa suave de "Advertencia/Atención" */
+    border-left: 6px solid #e91e63; /* Borde rosa fuerte */
+    border-radius: 12px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reset-toolkit-card h3 {
+    color: #e91e63;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-top: 0;
+}
+
+.reset-toolkit-card ol {
+    list-style-type: none;
+    padding-left: 0;
+    counter-reset: step-counter; /* Inicializa el contador */
+}
+
+.reset-toolkit-card ol li {
+    counter-increment: step-counter;
+    margin-bottom: 12px;
+    padding-left: 35px;
+    position: relative;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Estilo para el círculo numerado (arteficio del "hecho a mano") */
+.reset-toolkit-card ol li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-color: #e91e63; /* Círculo rosa */
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+/* Estilo para la Cita de Reparación */
+.repair-quote {
+    font-style: italic;
+    font-weight: 600;
+    color: #07925d; /* Color verde de la calma */
+    border-left: 4px solid #07925d;
+    padding: 10px 15px;
+    margin: 15px 0;
+    background-color: #f0f8ff; /* Fondo azul suave para la cita */
+    border-radius: 4px;
+}

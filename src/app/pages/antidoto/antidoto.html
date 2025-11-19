@@ -1,0 +1,120 @@
+<mat-card class="page-card">
+  <mat-card-header>
+    <mat-card-title>
+      <h2>3. El Antídoto: La tabla de validación conductual</h2>
+    </mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <h3>¿Qué es la Validación?</h3>
+    <p>Validar no es estar de acuerdo. Validar no es "dar el avión".</p>
+    <p>
+      <strong>Validar es enviar el mensaje: "Te veo, te escucho y lo que sientes es importante para mí".</strong>
+      Aprende a desarmar el conflicto en el momento.
+    </p>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube-nocookie.com/embed/eSG-4o48hPo" 
+            title="Aprender a escuchar y dialogar un problema en familia. Dinámica positiva." 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+    <h3 class="psychology-title">💡 ¿Por qué funciona la validación? (La Psicología)</h3>
+    <div class="info-section">
+      <p>
+        La validación actúa directamente sobre el **sistema nervioso**. Cuando alguien se siente escuchado y no juzgado, su cerebro desactiva la respuesta de "lucha o huida" y produce **oxitocina** (la hormona de la confianza).
+      </p>
+      <p>
+        Esto no solo calma a la persona, sino que le devuelve la capacidad de **razonar**. La validación no es magia; es la llave para pasar del **cerebro emocional** al **cerebro lógico** de tu familiar. Es el primer paso para buscar soluciones juntos.
+      </p>
+    </div>
+
+    <hr class="section-separator">
+
+    <h3>La Tabla de Antídotos</h3>
+    <p>
+      La clave es tener las frases listas. Aquí tienes la guía de reemplazo de frases 
+      que transforma la invalidación en conexión:
+    </p>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z2 antidote-table">
+
+      <ng-container matColumnDef="invalidante">
+        <th mat-header-cell *matHeaderCellDef> En lugar de la Frase que Invalida... </th>
+        <td mat-cell *matCellDef="let element"> {{element.invalidante}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="validante">
+        <th mat-header-cell *matHeaderCellDef> Prueba con la Frase que Valida... </th>
+        <td mat-cell *matCellDef="let element"> {{element.validante}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+    <hr class="section-separator">
+
+    <mat-card class="challenge-card">
+      <div *ngIf="!challengeComplete">
+        
+        <h3>Desafío: ¡Prueba tus Habilidades de Antídoto!</h3>
+        <p class="quiz-status">
+          Escenario {{ currentChallengeIndex + 1 }} de {{ challengeScenarios.length }}
+        </p>
+
+        <div *ngIf="!showFeedback; else feedbackBlock" class="question-slide">
+          
+          <p class="situation-text">
+            **Situación:** {{ challengeScenarios[currentChallengeIndex].situation }}
+          </p>
+          
+          <div class="challenge-options">
+            <button 
+              mat-raised-button 
+              *ngFor="let option of challengeScenarios[currentChallengeIndex].options" 
+              (click)="responder(option)" 
+              [color]="option.isCorrect ? 'primary' : 'accent'" 
+              class="challenge-button">
+              {{ option.text }}
+            </button>
+          </div>
+        </div>
+
+        <ng-template #feedbackBlock>
+          <div [ngClass]="{'result-correct': challengeScenarios[currentChallengeIndex].userAnswer, 'result-incorrect': !challengeScenarios[currentChallengeIndex].userAnswer}" class="challenge-result-box">
+            <h4>
+              {{ challengeScenarios[currentChallengeIndex].userAnswer ? '¡Correcto! Antídoto Aplicado.' : 'Incorrecto, fue una invalidación.' }}
+            </h4>
+            <p>{{ challengeScenarios[currentChallengeIndex].feedback }}</p>
+            <button mat-raised-button color="primary" (click)="nextScenario()">
+              {{ currentChallengeIndex < challengeScenarios.length - 1 ? 'Siguiente Escenario →' : 'Ver Resultados Finales →' }}
+            </button>
+          </div>
+        </ng-template>
+
+      </div>
+      
+      <div *ngIf="challengeComplete" class="final-results-box">
+        <h3>Resultados Finales del Desafío</h3>
+        <p class="final-score">
+          Lograste **{{ totalCorrect }}** respuestas válidas de **{{ challengeScenarios.length }}**.
+        </p>
+        <p class="score-message">
+          Tu habilidad para validar está en **{{ totalCorrect >= 8 ? 'Nivel Avanzado' : totalCorrect >= 5 ? 'Nivel Intermedio' : 'Nivel Inicial' }}**.
+        </p>
+        <button mat-raised-button color="primary" (click)="resetChallenge()">Repetir Desafío</button>
+      </div>
+
+    </mat-card>
+
+    <p style="text-align: center; margin-top: 30px;">
+      <span style="color: #07925d; font-weight: 700;">Continúa con la fase final: 4. Instrucciones de Uso</span>
+    </p>
+    
+  </mat-card-content>
+</mat-card>

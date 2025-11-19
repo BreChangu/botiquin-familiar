@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css (Versión LIMPIA Y COMPLETA) */
+
+/* 1. Importamos la fuente 'Nunito' desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+/* 2. Estilos globales del body */
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #fdfdfd; /* Un fondo blanco-hueso muy sutil */
+}
+
+/* 3. Hacemos que la fuente en las tarjetas de Material sea la correcta */
+.mat-mdc-card-content {
+  font-family: 'Nunito', sans-serif;
+}
+
+/*
+========================================
+ SOBREESCRITURA GLOBAL DEL SIDENAV
+========================================
+*/
+
+/* Usamos 'app-sidebar' para que estos estilos 
+  solo afecten a los items DENTRO de tu componente.
+*/
+
+/* 1. Estilos para todos los items de la lista */
+app-sidebar .mat-mdc-list-item {
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  color: #555 !important;
+  margin: 4px 12px !important;
+  width: calc(100% - 24px) !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease-in-out !important;
+  display: flex !important;
+  align-items: center !important;
+  border-left: 4px solid transparent !important; 
+  
+  /* Matamos TODOS los fondos de estado de Material */
+  --mat-list-list-item-hover-state-layer-color: transparent !important;
+  --mat-list-list-item-focus-state-layer-color: transparent !important;
+  --mat-list-list-item-selected-state-layer-color: transparent !important; 
+}
+
+/* 2. Iconos */
+app-sidebar .mat-mdc-list-item mat-icon {
+  margin-right: 16px !important;
+  color: #aaa !important;
+  transition: color 0.2s ease-in-out !important;
+}
+
+/* 3. Nuestro hover personalizado */
+app-sidebar .mat-mdc-list-item:hover {
+  background-color: #f5f5f5 !important;
+  color: #333 !important;
+}
+
+/* 4. Enlace ACTIVO (el importante) */
+app-sidebar .mat-mdc-list-item.active-link {
+  background-color: transparent !important;
+  color: #21bd8e !important; /* Tu color activo */
+  font-weight: 700 !important;
+  box-shadow: none !important;
+  border-left: 4px solid #21bd8e !important; /* Tu color activo */
+}
+
+/* 5. Icono ACTIVO */
+app-sidebar .mat-mdc-list-item.active-link mat-icon {
+  color: #21bd8e !important;
+}

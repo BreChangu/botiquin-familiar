@@ -1,0 +1,102 @@
+<mat-card class="page-card">
+  <mat-card-header>
+    <mat-card-title>
+      <h2>Introducción: El eco del silencio</h2>
+    </mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube-nocookie.com/embed/EFzOLIulTLY?autoplay=1&mute=1" 
+            title="Nuestros traumas transgeneracionales | TEDx" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+    <h3>El impacto de lo que callamos: Patrones heredados</h3>
+    <p>
+      Como has visto en la charla, la familia es nuestro primer "sistema social". 
+      Es un lugar tejido por hilos visibles e invisibles de lealtades, amor, y expectativas. 
+      Lo que nos impacta emocionalmente en la infancia, no desaparece; se integra y se 
+      transmite a nuestros hijos a través de nuestros gestos, reacciones y, sobre todo, 
+      nuestro **silencio**.
+    </p>
+
+    <h4>¿Qué es la Invalidación Emocional?</h4>
+    <p>
+      La **invalidación** ocurre cuando negamos, corregimos o minimizamos lo que el otro siente 
+      (ej. "no llores", "no es para tanto", "tienes que ser fuerte"). Aunque parezca inofensivo, 
+      este hábito enseña a nuestros hijos a **reprimir sus emociones** por miedo al juicio o 
+      al rechazo. Este es el ciclo tóxico que este botiquín busca romper.
+    </p>
+
+    <h4>La Promesa: El Valor de la Validación</h4>
+    <p>
+      Este manual es una herramienta práctica y fundamental para cambiar esos patrones. 
+      No es terapia, pero es el primer paso fundamental hacia una comunicación sana. 
+      Aprenderás que **la validación no es estar de acuerdo** con la conducta, 
+      sino con la emoción. Es el puente que convierte un momento de crisis en una oportunidad 
+      para fortalecer la conexión familiar y crear una nueva herencia emocional.
+    </p>
+
+    <p style="text-align: center; margin-top: 30px;">
+      **¿Listo para descubrir dónde está fallando la comunicación?**
+      <br>
+      <span style="color: #21bd8e; font-weight: 700;">Haz clic en el menú lateral para iniciar la fase: 2. Diagnóstico: La Herida Invisible</span>
+    </p>
+
+<br>
+    <mat-card class="quiz-card">
+  
+  <div class="quiz-progress" *ngIf="!resultadoVisible">
+    Pregunta {{ currentQuestionIndex + 1 }} de {{ questions.length }}
+    <mat-progress-bar 
+      mode="determinate" 
+      [value]="((currentQuestionIndex + 1) / questions.length) * 100" 
+      color="warn">
+    </mat-progress-bar>
+  </div>
+
+  <div *ngIf="!resultadoVisible" class="question-slide">
+    
+    <h3 class="quiz-question-text">
+      {{ questions[currentQuestionIndex].text }}
+    </h3>
+
+    <div class="quiz-actions">
+      <button mat-raised-button color="warn" (click)="responder(true)">
+        Sí
+      </button>
+      <button mat-raised-button color="primary" (click)="responder(false)">
+        No
+      </button>
+    </div>
+  </div>
+  
+  <div *ngIf="resultadoVisible" class="quiz-result-box">
+    <h3>¡Tus resultados están listos!</h3>
+    <h4>Nivel de Patrón Heredado:</h4>
+    
+    <div class="score-display">
+        <strong>Puntuación: {{ score }} de {{ questions.length }}</strong>
+    </div>
+    
+    <p [ngClass]="{'high-score': score === questions.length}">
+    "{{ getMessage() }}"
+</p>
+    
+    <p class="result-prompt">
+        Usa esta puntuación como motivación para empezar. La consciencia es el primer paso.
+    </p>
+
+    <button mat-button color="primary" (click)="reset()">Reiniciar Quiz</button>
+  </div>
+</mat-card>
+
+     
+  </mat-card-content>
+</mat-card>

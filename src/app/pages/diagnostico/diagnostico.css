@@ -1,0 +1,158 @@
+/* src/app/pages/diagnostico/diagnostico.css */
+
+.page-card {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+h4 {
+  color: #e91e63; /* Usamos tu color de acento (rosa) */
+  border-left: 4px solid #e91e63; 
+  padding-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #e91e63;
+  font-size: 1.8rem;
+  margin-top: 15px;
+}
+
+/* --- Estilos para la Sección Interactiva --- */
+
+.interactive-phrases-section {
+  padding: 20px;
+  background-color: #fff8f8; /* Fondo suave para la sección interactiva */
+  border-radius: 12px;
+  margin-top: 30px;
+  border: 1px solid #f0f0f0;
+}
+
+.interactive-title {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.phrase-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.phrase-buttons-container button {
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 20px; /* Bordes más redondeados para el toque artesanal */
+  /* Usamos el color de acento para los botones */
+  border-color: #e91e63 !important; 
+  color: #e91e63 !important;
+  transition: all 0.2s ease-in-out;
+}
+.phrase-buttons-container button:hover {
+  background-color: #e91e63;
+  color: white !important;
+}
+
+/* --- Caja de Resultado --- */
+
+.impact-result-box {
+  background-color: #e0f2f1; /* Fondo verde pálido (salud/calma) */
+  border-left: 5px solid #07925d; /* Borde de acento verde */
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+  animation: fadeIn 0.5s ease-in-out;
+  margin-top: 20px;
+}
+
+.impact-result-box h4 {
+  color: #07925d;
+  font-size: 1.1rem;
+  border-left: none; /* Quitamos el borde izquierdo aquí */
+  margin-top: 0;
+}
+
+.impact-text {
+  font-style: italic;
+  font-weight: 500;
+  color: #333;
+}
+
+.final-prompt {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Animación simple para el resultado */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.static-phrases-section {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #f7f7f7; /* Un fondo muy claro para diferenciarla */
+  border-left: 4px solid #07925d; /* Un borde verde para el "diagnóstico" */
+  border-radius: 8px;
+}
+
+.static-phrases-section h4 {
+  color: #07925d; /* Color verde para el título de la lista */
+  border-left: none; /* Quitamos el borde aquí */
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.symptom-list {
+  list-style-type: disc; /* Restauramos los puntos de la lista */
+  padding-left: 20px; /* Indentamos la lista */
+  margin-top: 15px;
+  margin-bottom: 0; /* Ajustamos el margen inferior */
+}
+
+.symptom-list li {
+  background-color: transparent; /* Quitamos el fondo para una lista más limpia */
+  border-left: none; /* Quitamos el borde left para una lista estándar */
+  margin-bottom: 8px;
+  padding: 0; /* Quitamos el padding para que sea una lista normal */
+  font-weight: 400; /* Peso de fuente normal */
+  color: #555;
+  border-radius: 0;
+}
+
+/* Estilo para el separador */
+.section-separator {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(150, 150, 150, 0.75), rgba(0, 0, 0, 0));
+  margin: 40px 0; /* Más espacio para que se vea claro */
+}
+
+/* Ajustes a la sección interactiva para que no colisione */
+.interactive-phrases-section {
+  padding: 25px; /* Un poco más de padding */
+  margin-top: 0; /* Ya no necesita margen superior por el separador */
+}
+
+.interactive-title {
+  font-size: 1.3rem; /* Un poco más grande para el título interactivo */
+}
+
+.phrase-buttons-container {
+  margin-top: 20px; /* Más espacio entre el título y los botones */
+
+
+
+}

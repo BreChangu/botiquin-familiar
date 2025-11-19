@@ -1,0 +1,52 @@
+<mat-card class="page-card">
+  <mat-card-header>
+    <mat-card-title>
+      <h2>2. Diagnóstico: La herida invisible (Identificando la invalidación)</h2>
+    </mat-card-title>
+  </mat-card-header>
+  
+ <mat-card-content>
+    <h3>¿Qué es la Invalidación?</h3>
+    <p>
+      Es el acto (a veces inconsciente) de rechazar, ignorar o minimizar las emociones 
+      de otra persona. Es enviar el mensaje oculto de: <strong>"Lo que sientes no es 
+      correcto, no es importante o es una exageración".</strong>
+    </p>
+
+    <div class="static-phrases-section">
+      <h4>Identificando los Ecos: Frases comunes de invalidación</h4>
+      <p>A menudo, estas frases se dicen con buena intención, pero causan un daño invisible:</p>
+      
+      <li *ngFor="let phrase of phrases">{{ phrase.text }}</li>
+    </div>
+    <hr class="section-separator"> <div class="interactive-phrases-section">
+      <h4 class="interactive-title">
+        **Explora el Impacto Oculto:** Toca las frases que usas o escuchaste en tu infancia.
+      </h4>
+
+      <div class="phrase-buttons-container">
+        <button 
+          mat-stroked-button 
+          color="warn" 
+          *ngFor="let phrase of phrases" 
+          (click)="revealImpact(phrase.impact)">
+          {{ phrase.text }}
+        </button>
+      </div>
+
+      <div *ngIf="currentImpact" class="impact-result-box">
+        <h4>Impacto Psicológico (La herida invisible):</h4>
+        <p class="impact-text">{{ currentImpact }}</p>
+      </div>
+    </div>
+    <p class="final-prompt">
+      Reconocer estas frases en tu día a día es el primer paso crucial. 
+      Ahora que sabes cómo se siente la herida, es momento de aprender a sanarla.
+    </p>
+
+    <p style="text-align: center;">
+      <span style="color: #07925d; font-weight: 700;">Haz clic en el menú lateral para ir a la siguiente fase: 3. El Antídoto</span>
+    </p>
+
+  </mat-card-content>
+</mat-card>

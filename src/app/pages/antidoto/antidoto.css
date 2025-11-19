@@ -1,0 +1,123 @@
+/* src/app/pages/antidoto/antidoto.css */
+
+.page-card {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+h3 {
+  color: #e91e63; /* Color de acento rosa */
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+/* Estilos para la Tabla */
+.antidote-table {
+  width: 100%;
+  margin-top: 20px;
+}
+.antidote-table th {
+  background-color: #fce4ec; /* Fondo suave para los encabezados */
+  font-weight: 700;
+  color: #c2185b; /* Color de acento rosa oscuro */
+}
+
+/* Estilos para el Video Responsive */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+  margin: 25px 0 30px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; 
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* src/app/pages/antidoto/antidoto.css */
+
+.psychology-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #07925d; /* Green accent color */
+  margin-top: 40px;
+  margin-bottom: 15px;
+} /* <-- La llave de cierre es importante */
+
+.info-section p {
+  color: #555;
+  line-height: 1.6;
+} /* <-- La llave de cierre es importante */
+
+/* Estilos para el Desafío Interactivo (Challenge Card) */
+.challenge-card {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fce4ec !important; /* Soft pink background */
+  border-left: 6px solid #e91e63; /* Pink accent bar */
+}
+
+.situation-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.challenge-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center; /* Centra los botones */
+}
+
+.challenge-button {
+  background-color: white;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-weight: 500;
+  transition: all 0.2s;
+  padding: 10px 15px;
+  min-height: 50px;
+  width: 100%; /* Ocupa el 100% de su contenedor */
+  max-width: 600px; /* Ancho máximo */
+  white-space: normal;
+}
+
+.challenge-button:hover {
+  background-color: #fce4ec;
+}
+
+/* Estilos para el Feedback del Resultado */
+.challenge-result-box {
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.result-correct {
+  background-color: #e0f2f1; /* Light green */
+  border: 2px solid #07925d;
+}
+
+.result-incorrect {
+  background-color: #ffebee; /* Light red/pink */
+  border: 2px solid #e91e63;
+}
+
+.section-separator {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(150, 150, 150, 0.75), rgba(0, 0, 0, 0));
+  margin: 40px 0;
+}

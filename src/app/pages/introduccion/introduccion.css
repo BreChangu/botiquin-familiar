@@ -1,0 +1,109 @@
+/* src/app/pages/introduccion/introduccion.css */
+
+.page-card {
+  /* Le damos un ancho máximo a la tarjeta para que no sea infinita */
+  max-width: 60rem;
+  margin: 20px auto;
+}
+
+/*
+  El contenedor es clave para que el video sea responsive 16:9
+*/
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 (altura = 56.25% del ancho) */
+  margin: 20px 0 30px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; 
+  overflow: hidden;
+}
+
+/*
+  El iframe debe ocupar el 100% de la altura/ancho del contenedor
+*/
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+h3 {
+  color: #e91e63; /* Usamos tu color de acento (rosa) */
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+/* src/app/pages/introduccion/introduccion.css */
+
+/* ... (tus estilos .page-card, .video-container, etc. se quedan igual) ... */
+
+h4 {
+  color: #e91e63; /* Usamos tu color de acento (rosa) */
+  border-left: 4px solid #e91e63; /* Borde izquierdo de acento */
+  padding-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+
+/* src/app/pages/introduccion/introduccion.css (Estilos del Quiz) */
+
+/* Estilos para la Tarjeta del Quiz */
+.quiz-card {
+    margin-top: 40px;
+    padding: 30px !important; /* Forzamos padding para que se vea bien */
+    background-color: #fef4f7 !important; /* Fondo suave (Rosa Pálido/Cálido) */
+    border-left: 5px solid #e91e63 !important; /* Borde de acento rosa */
+    border-radius: 12px !important;
+    text-align: center;
+}
+
+.quiz-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.quiz-questions mat-checkbox {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.quiz-actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Estilos para el Resultado */
+.quiz-result-box {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #e0f2f1; /* Fondo verde pálido (salud/calma) */
+    border: 1px solid #07925d;
+}
+
+.score-display {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #07925d;
+    margin-bottom: 10px;
+}
+
+.high-score {
+    color: #d9534f; /* Color de advertencia para el score 3/3 (tu color más oscuro) */
+    font-weight: 800;
+}
