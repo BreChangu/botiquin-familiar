@@ -1,22 +1,22 @@
-# netlify.toml
+# netlify.toml (CONFIGURACIÓN FINAL Y CORREGIDA)
 
 [build]
-  # 1. Comando de compilación de Angular (para producción)
-  command = "ng build --configuration production" 
+  # 1. Comando de compilación: Instalación, luego Compilación.
+  # El comando 'npm install' es CRÍTICO.
+  command = "npm install && ng build --configuration production" 
 
-  # 2. Directorio donde Angular coloca los archivos finales
+  # 2. Directorio de publicación: El error que Netlify te dio.
   publish = "dist/botiquin-familiar/browser" 
 
-  # 3. La parte más CRÍTICA: La ruta base debe ser la raíz (/).
-  # Esto resuelve el 404/navegación de la SPA.
-  publish = "dist/botiquin-familiar/browser"
-
+  # 3. La rama principal debe tener la misma configuración
 [context.production]
-  command = "npm install && npm run build" # Usar npm para asegurar que las dependencias se instalen primero
+  # El comando es el mismo: forzamos la instalación primero
+  command = "npm install && ng build --configuration production" 
   publish = "dist/botiquin-familiar/browser"
 
+# 4. REDIRECCIÓN DE SPAS (Solución al 404 Not Found)
+# Usamos la sintaxis correcta para [redirects] en Netlify TOML.
 [[redirects]]
-  # 4. Regla de redirección para SPAs (soluciona el error 404 al navegar)
   from = "/*"
   to = "/index.html"
   status = 200
