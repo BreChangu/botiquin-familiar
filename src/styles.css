@@ -1,4 +1,4 @@
-/* src/styles.css (Versión LIMPIA Y COMPLETA) */
+/* src/styles.css (Versión LIMPIA Y CON UNIDADES RELATIVAS) */
 
 /* 1. Importamos la fuente 'Nunito' desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
@@ -6,7 +6,9 @@
 /* 2. Estilos globales del body */
 body {
   font-family: 'Nunito', sans-serif;
-  background-color: #fdfdfd; /* Un fondo blanco-hueso muy sutil */
+  background-color: #fdfdfd; 
+  /* 1rem = 16px por defecto. No cambiamos este valor aquí. */
+  font-size: 100%; 
 }
 
 /* 3. Hacemos que la fuente en las tarjetas de Material sea la correcta */
@@ -21,21 +23,24 @@ body {
 */
 
 /* Usamos 'app-sidebar' para que estos estilos 
-  solo afecten a los items DENTRO de tu componente.
+   solo afecten a los items DENTRO de tu componente.
 */
 
 /* 1. Estilos para todos los items de la lista */
 app-sidebar .mat-mdc-list-item {
-  font-size: 0.95rem !important;
+  font-size: 0.95rem !important; /* Mantenemos rem (relativo al tamaño base) */
   font-weight: 600 !important;
   color: #555 !important;
-  margin: 4px 12px !important;
-  width: calc(100% - 24px) !important;
-  border-radius: 8px !important;
+  
+  /* --- CAMBIO A UNIDADES RELATIVAS --- */
+  margin: 0.25rem 0.75rem !important; /* 4px y 12px convertidos a REM */
+  width: calc(100% - 1.5rem) !important; /* 24px (12px * 2) convertido a 1.5rem */
+  
+  border-radius: 0.5rem !important; /* 8px convertido a 0.5rem */
   transition: all 0.2s ease-in-out !important;
   display: flex !important;
   align-items: center !important;
-  border-left: 4px solid transparent !important; 
+  border-left: 0.25rem solid transparent !important; /* 4px convertido a 0.25rem */
   
   /* Matamos TODOS los fondos de estado de Material */
   --mat-list-list-item-hover-state-layer-color: transparent !important;
@@ -45,7 +50,7 @@ app-sidebar .mat-mdc-list-item {
 
 /* 2. Iconos */
 app-sidebar .mat-mdc-list-item mat-icon {
-  margin-right: 16px !important;
+  margin-right: 1rem !important; /* 16px convertido a 1rem */
   color: #aaa !important;
   transition: color 0.2s ease-in-out !important;
 }
@@ -59,13 +64,29 @@ app-sidebar .mat-mdc-list-item:hover {
 /* 4. Enlace ACTIVO (el importante) */
 app-sidebar .mat-mdc-list-item.active-link {
   background-color: transparent !important;
-  color: #21bd8e !important; /* Tu color activo */
+  color: #21bd8e !important; 
   font-weight: 700 !important;
   box-shadow: none !important;
-  border-left: 4px solid #21bd8e !important; /* Tu color activo */
+  border-left: 0.25rem solid #21bd8e !important; /* 4px convertido a 0.25rem */
 }
 
 /* 5. Icono ACTIVO */
 app-sidebar .mat-mdc-list-item.active-link mat-icon {
   color: #21bd8e !important;
+}
+ 
+
+
+@media (max-width: 360px) {
+  app-sidebar .mat-mdc-list-item {
+    font-size: 0.9rem !important; /* Ajuste de tamaño en pantallas pequeñas */
+    margin: 0.2rem 0.5rem !important; /* Ajuste de márgenes en pantallas pequeñas */
+    width: calc(100% - 1rem) !important; /* Ajuste de ancho en pantallas pequeñas */
+  }
+
+  .titulo-principal {
+    font-size: 1.4rem;
+    margin-left:0rem;
+    color:aquarine;
+  }
 }

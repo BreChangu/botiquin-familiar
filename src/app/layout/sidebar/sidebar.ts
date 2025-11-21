@@ -18,7 +18,7 @@ import { MatSidenav } from '@angular/material/sidenav';
     MatListModule,
     RouterModule,
     MatIconModule,
-    MatSidenav,
+    
   ],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css'

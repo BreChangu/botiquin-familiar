@@ -16,4 +16,10 @@
     align-items: center;
 }
 
+@media (max-width: 360px) {
+  .app-sidenav {
+    width: 14rem; /* Ancho más estrecho para pantallas pequeñas */
+  }
 
+  
+}

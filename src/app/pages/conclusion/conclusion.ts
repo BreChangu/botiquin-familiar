@@ -20,7 +20,6 @@ interface Resource {
     MatCardModule,
     MatIconModule,
     NgFor,
-    NgIf,
     MatButtonModule // Necesario para el botón de crisis
   ],
   templateUrl: './conclusion.html',

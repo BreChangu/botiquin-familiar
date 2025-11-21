@@ -156,3 +156,15 @@ h3 {
 
 
 }
+
+@media (max-width: 360px) {
+.mat-card-content h3{
+
+    font: 1.2rem ;
+}  
+
+  .phrase-buttons-container button {
+    width: 100%; /* Botones de ancho completo en pantallas pequeñas */
+    max-width: 300px; /* Pero con un máximo para que no sean demasiado anchos */
+  }
+}
