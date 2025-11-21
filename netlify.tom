@@ -1,22 +1,4 @@
-# netlify.toml (CONFIGURACIÓN FINAL Y CORREGIDA)
-
-[build]
-  # 1. Comando de compilación: Instalación, luego Compilación.
-  # El comando 'npm install' es CRÍTICO.
-  command = "npm install && ng build --configuration production" 
-
-  # 2. Directorio de publicación: El error que Netlify te dio.
-  publish = "dist/botiquin-familiar/browser" 
-
-  # 3. La rama principal debe tener la misma configuración
-[context.production]
-  # El comando es el mismo: forzamos la instalación primero
-  command = "npm install && ng build --configuration production" 
-  publish = "dist/botiquin-familiar/browser"
-
-# 4. REDIRECCIÓN DE SPAS (Solución al 404 Not Found)
-# Usamos la sintaxis correcta para [redirects] en Netlify TOML.
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# [[redirects]]
+# from = "/*"
+# to = "/index.html"
+# status = 200
