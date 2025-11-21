@@ -1,0 +1,22 @@
+# netlify.toml
+
+[build]
+  # 1. Comando de compilación de Angular (para producción)
+  command = "ng build --configuration production" 
+
+  # 2. Directorio donde Angular coloca los archivos finales
+  publish = "dist/botiquin-familiar/browser" 
+
+  # 3. La parte más CRÍTICA: La ruta base debe ser la raíz (/).
+  # Esto resuelve el 404/navegación de la SPA.
+  publish = "dist/botiquin-familiar/browser"
+
+[context.production]
+  command = "npm install && npm run build" # Usar npm para asegurar que las dependencias se instalen primero
+  publish = "dist/botiquin-familiar/browser"
+
+[[redirects]]
+  # 4. Regla de redirección para SPAs (soluciona el error 404 al navegar)
+  from = "/*"
+  to = "/index.html"
+  status = 200
