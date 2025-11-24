@@ -54,7 +54,25 @@ export class Conclusion {
   }
   
   // Simplemente abre el enlace en una nueva pestaña
-  openResource(url: string) {
-    window.open(url, '_blank');
+openResource(fileName: string, target: string = '_blank') { 
+  // Construimos la URL de forma ABSOLUTA desde la raíz para evitar errores 404
+  const url = '/assets/' + fileName;
+  window.open(url, target);
+}
+
+downloadables = [
+  { 
+    name: 'Diario Terapéutico de Conexión Personal',
+    description: 'Un set de 49 páginas para el seguimiento de patrones de pensamiento y emoción. Incluye secciones para el Registro Diario , rastreadores de Hábitos que me Hacen Bien , herramientas de reestructuración cognitiva (como la Papelera de Pensamientos Negativos ), y un Plan de Crisis Personal.',
+    file: 'diario.pdf', // <-- ESTANDARIZADO
+    icon: 'edit_note'
+  },
+  { 
+    name: 'Farmacia Emocional',
+    description: 'Un set de plantillas  para imprimir y armar tus propios remedios simbólicos en casa. Incluye etiquetas para ABRAZOTENOL (indicado para extrañar menos ), RISOTRIL® (para que nunca falten las risas ), y CORAZOLINA (200mg de amor incondicional )',
+    // CORRECCIÓN CLAVE: ¡TODAS MINÚSCULAS!
+    file: 'guia-antidotos-rapida.pdf', 
+    icon: 'menu_book'
   }
+];
 }

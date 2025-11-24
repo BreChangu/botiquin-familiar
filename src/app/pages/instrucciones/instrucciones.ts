@@ -28,7 +28,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 export class Instrucciones implements OnInit { // Usamos OnInit para inicializar
 
   // --- 1. DECLARACIÓN DE VARIABLES (Fuera del constructor) ---
-  videoYoutubeId: string = 'L61ftaps0gw';
+  videoYoutubeId: string = 'JLi7dLJAEuU';
   safeVideoUrl!: SafeResourceUrl; // Se declara aquí
   showExtraTips: boolean = false;
 

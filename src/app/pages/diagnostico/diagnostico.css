@@ -157,14 +157,25 @@ h3 {
 
 }
 
-@media (max-width: 360px) {
-.mat-card-content h3{
+@media (max-width: 768px) {
+    /* Regla para tabletas y móviles más grandes: reducimos el tamaño un poco */
+    .page-card h2 {
+        font-size: 1.8rem !important; /* De 2.5rem a 1.8rem */
+        line-height: 1.2;
+    }
+}
 
-    font: 1.2rem ;
-}  
 
-  .phrase-buttons-container button {
-    width: 100%; /* Botones de ancho completo en pantallas pequeñas */
-    max-width: 300px; /* Pero con un máximo para que no sean demasiado anchos */
-  }
+@media (max-width: 480px) {
+    /* Regla para móviles pequeños: forzamos aún más la reducción */
+    .page-card h2 {
+        font-size: 1.5rem !important; /* Reducción máxima del título principal */
+    }
+    
+    .phrase-buttons-container button {
+        /* Aseguramos que los botones de las frases se apilen */
+        width: 100%; 
+        font-size: 0.9rem; /* Reducimos la fuente del botón */
+        text-align: center;
+    }
 }

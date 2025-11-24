@@ -183,3 +183,81 @@ h4 {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(150, 150, 150, 0.75), rgba(0, 0, 0, 0));
   margin: 40px 0;
 }
+
+/* src/app/pages/conclusion/conclusion.css (Estilos para la Sección de Descargables) */
+
+.download-section {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.download-section h3 {
+    color: #e91e63; /* El color rosa del Botiquín */
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.download-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.download-card {
+    max-width: 380px;
+    min-height: 180px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border-color: #e91e63; /* Borde rosa en hover */
+}
+
+.download-card mat-card-header {
+    margin-bottom: 10px;
+}
+
+.download-card mat-icon[mat-card-avatar] {
+    background-color: #fce4ec; /* Fondo rosa pálido */
+    color: #e91e63; /* Rosa de acento */
+}
+
+.download-card mat-card-title {
+    font-weight: 700;
+    color: #333;
+}
+
+.download-card mat-card-actions {
+    margin-top: auto; /* Empuja las acciones hacia abajo */
+    padding-bottom: 16px;
+    text-align: right;
+}
+
+
+/* src/app/pages/conclusion/conclusion.css (Mejora de Legibilidad en Descargables) */
+
+/*
+  ESTILOS PARA LA DESCRIPCIÓN DENTRO DE LA TARJETA DE DESCARGA
+*/
+.download-card mat-card-content p {
+    /* 1. Aumentamos el espaciado entre líneas para "desamontonar" el texto */
+    line-height: 1.6; 
+    
+    /* 2. Suavizamos ligeramente el color del texto */
+    color: #444; 
+    
+    /* 3. Aseguramos un espaciado consistente al fondo */
+    margin-bottom: 0.5rem; 
+    
+    /* Hacemos el texto un poco más delgado para que se vea más limpio */
+    font-weight: 400; 
+    font-size: 0.95rem; 
+}

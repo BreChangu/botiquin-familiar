@@ -1,5 +1,3 @@
-<!-- src/app/pages/conclusion/conclusion.html (CÓDIGO COMPLETO Y COMBINADO) -->
-
 <mat-card class="page-card">
   <mat-card-header>
     <mat-card-title>
@@ -9,17 +7,14 @@
   
   <mat-card-content>
     
-    <!-- BLOQUE 1: DECLARACIÓN DE CIERRE -->
     <p>
       Has completado el Botiquín Emocional. Recuerda: La <strong>clave no es la perfección, es la reparación</strong>. Los patrones de silencio de una vida no se rompen en un día. Lo importante es que hoy diste el primer paso de consciencia y adquiriste las herramientas necesarias para reescribir tu historia familiar.
     </p>
 
-    <!-- BLOQUE 2: RESUMEN DEL VIAJE (3 Cards) -->
     <hr class="section-separator">
     <h3>El Viaje de Transformación: De la Herida a la Conexión</h3>
     <div class="summary-points-container">
         
-        <!-- Punto 1: Consciencia -->
         <mat-card class="summary-card">
             <mat-card-content>
                 <mat-icon color="warn">visibility</mat-icon>
@@ -28,7 +23,6 @@
             </mat-card-content>
         </mat-card>
 
-        <!-- Punto 2: Reseteo -->
         <mat-card class="summary-card">
             <mat-card-content>
                 <mat-icon color="primary">cached</mat-icon>
@@ -37,7 +31,6 @@
             </mat-card-content>
         </mat-card>
 
-        <!-- Punto 3: Acción -->
         <mat-card class="summary-card">
             <mat-card-content>
                 <mat-icon color="accent">check_circle_outline</mat-icon>
@@ -48,8 +41,6 @@
     </div>
 
     <hr class="section-separator">
-
-    <!-- BLOQUE 3: COMPROMISO Y NOTA PERSONAL -->
     <div class="final-commitment">
         <h3>Tu Compromiso de Cierre</h3>
         <p class="commitment-text">
@@ -57,7 +48,6 @@
         </p>
     </div>
     
-    <!-- BLOQUE 4: MENSAJE DE LANZAMIENTO -->
     <div class="launchpad-message">
         <p>
             No cierres este manual pensando que es el final. <strong>Este es solo el mapa</strong> que obtuviste antes de cruzar la puerta. El verdadero trabajo empieza ahora, en la vida cotidiana.
@@ -66,7 +56,6 @@
         </p>
     </div>
     
-    <!-- BLOQUE 5: NOTA PERSONAL DEL PSICÓLOGO -->
     <mat-card class="companion-note-card">
         <mat-card-content>
             <h4>✍️ Una Nota Final del Psicólogo</h4>
@@ -77,7 +66,6 @@
         </mat-card-content>
     </mat-card>
     
-    <!-- BLOQUE 6: EL ANCLAJE INTERACTIVO (Con botón de frase aleatoria) -->
     <hr class="section-separator">
     <mat-card class="daily-anchor-card">
         <mat-card-title>Un Anclaje para tu Viaje</mat-card-title>
@@ -94,7 +82,39 @@
         </mat-card-content>
     </mat-card>
 
-    <!-- BLOQUE 7: APOYO INMEDIATO Y RECURSOS FINALES -->
+    <hr class="section-separator">
+    <div class="download-section">
+        <h3>Descarga tu Toolkit de Reparación 📥</h3>
+        <p>
+            Lleva la práctica contigo. Estos recursos están diseñados para ser impresos y usados como un ancla visual en tu día a día.
+        </p>
+
+        <div class="download-container">
+            <mat-card 
+              *ngFor="let item of downloadables" 
+              class="download-card" 
+              >
+                
+                <mat-card-header>
+                    <mat-icon mat-card-avatar color="warn">{{ item.icon }}</mat-icon>
+                    <mat-card-title>{{ item.name }}</mat-card-title>
+                </mat-card-header>
+                
+                <mat-card-content>
+                    <p>{{ item.description }}</p>
+                </mat-card-content>
+                
+                <mat-card-actions>
+                    <a [href]="'/assets/' + item.file" [download]="item.file">
+                        <button mat-raised-button color="accent">
+                            <mat-icon>file_download</mat-icon> Descargar PDF
+                        </button>
+                    </a>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
     <hr class="section-separator">
 
     <div class="immediate-support-section">
@@ -103,7 +123,6 @@
             Si necesitas ayuda ahora mismo o te sientes sobrepasado, haz clic en el botón de abajo. No estás solo.
         </p>
 
-        <!-- El Botón de Crisis (Botón de Pánico) -->
         <button 
           mat-raised-button 
           class="crisis-button" 
@@ -118,7 +137,6 @@
 
     <h3>Profundiza en tu Entrenamiento</h3>
     <div class="resource-container">
-        <!-- Usamos *ngFor para iterar sobre los recursos externos -->
         <mat-card 
           *ngFor="let resource of externalResources" 
           class="resource-card interactive" 

@@ -1,6 +1,9 @@
 /* src/app/pages/instrucciones/instrucciones.css (Estilos del Checklist) */
 
 /* Estilos para la Tarjeta del Checklist */
+
+
+
 .checklist-card {
     margin-top: 30px;
     padding: 20px !important;
@@ -73,9 +76,12 @@ mat-progress-bar {
 .page-card h2 {
     color: #e91e63; /* Pink/Rose accent color */
     font-weight: 800; /* Extra bold */
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    margin-bottom: 1.25rem;
+    font-size: 2rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid #f0f0f0;
+    margin-left: 14rem;
+   
 }
 
 /* Estilo para los títulos de las reglas (H3) */
@@ -318,4 +324,48 @@ mat-progress-bar {
     margin: 15px 0;
     background-color: #f0f8ff; /* Fondo azul suave para la cita */
     border-radius: 4px;
+}
+
+/* src/app/pages/instrucciones/instrucciones.css (CORRECCIÓN DE RESPONSIVIDAD) */
+
+/* --- Estilo para el título principal H2 (El que dice "Instrucciones de Uso:...") --- */
+.page-card h2 {
+    color: #e91e63;
+    font-weight: 800;
+    font-size: 2rem; /* Mantener 2rem por defecto */
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    
+    /* ELIMINAMOS EL MARGIN-LEFT FIJO DE AQUÍ */
+    /* margin-left: 14rem; */ 
+}
+
+
+/* --- SECCIÓN DE MEDIA QUERIES --- */
+@media (max-width: 768px) {
+    /* Ajuste para el texto del header en tablet/móvil */
+    .page-card h2 {
+        font-size: 1.6rem !important; /* Reducimos el H2 en móvil */
+        margin-left: 0 !important;
+    }
+
+    /* Ajuste para los títulos internos del acordeón */
+    .regla-panel-title {
+        font-size: 1.1rem;
+    }
+
+    /* Ajuste para el número (círculo) */
+    .step-number {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 0.8rem;
+        margin-right: 10px;
+    }
+    
+    /* Ajuste para el tamaño de las fuentes dentro del acordeón */
+    .regla-panel p, .regla-panel ul li {
+        font-size: 0.95rem; 
+    }
 }
