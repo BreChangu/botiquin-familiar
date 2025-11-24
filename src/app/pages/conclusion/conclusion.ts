@@ -6,6 +6,9 @@ import { NgFor, NgIf } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon'; // <-- CLAVE: MatIcon
 import { MatButtonModule } from '@angular/material/button'; 
 
+declare let window: Window;
+
+
 interface Resource {
     name: string;
     url: string;
@@ -46,6 +49,7 @@ export class Conclusion {
     "La clave no es la perfección, es la Reparación. Tu vínculo es más fuerte cuando lo reparas.",
     "Recuerda que lo que no se habla, se hereda. Hoy has elegido romper ese silencio."
   ];
+window: any;
   
   // Método para generar una frase aleatoria
   generateDailyAnchor() {
@@ -55,9 +59,9 @@ export class Conclusion {
   
   // Simplemente abre el enlace en una nueva pestaña
 openResource(fileName: string, target: string = '_blank') { 
-  // Construimos la URL de forma ABSOLUTA desde la raíz para evitar errores 404
-  const url = '/assets/' + fileName;
-  window.open(url, target);
+  // CORRECCIÓN FINAL: Eliminamos la barra inicial (/)
+  const url = 'assets/' + fileName; 
+  window.open(url, target);
 }
 
 downloadables = [
