@@ -146,7 +146,7 @@ h3 {
    Esto soluciona el problema de amontonamiento
 ==============================================
 */
-@media (max-width: 600px) {
+@media (max-width: 360px) {
   
   .page-card {
     margin: 10px auto;
