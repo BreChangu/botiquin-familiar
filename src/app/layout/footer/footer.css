@@ -1,13 +1,12 @@
-/* src/app/layout/footer/footer.css (RESPONSIVO Y CON REM) */
+/* src/app/layout/footer/footer.css */
 
 .site-footer {
   width: 100%;
-  /* 32px 24px -> 2rem 1.5rem */
-  padding: 2rem 1.5rem;
-  background-color: #fafafa; 
-  border-top: 0.0625rem solid #f0f0f0; /* 1px -> rem */
+  padding: 32px 24px;
+  background-color: #fafafa; /* Fondo gris muy claro, no blanco */
+  border-top: 1px solid #f0f0f0; /* Borde superior sutil */
   box-sizing: border-box;
-  margin-top: 2.5rem; /* 40px -> 2.5rem */
+  margin-top: 40px; /* Espacio para separarlo del contenido */
 }
 
 .footer-content {
@@ -15,12 +14,66 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 1.5rem; /* 24px -> 1.5rem */
-  max-width: 50rem; /* 800px -> 50rem */
-  margin: 0 auto; 
+  gap: 24px; /* Espacio entre las secciones */
+  max-width: 800px;
+  margin: 0 auto; /* Centra el contenido */
 }
 
 /* --- Estilos para el Descargo de Responsabilidad --- */
+.footer-disclaimer p {
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.6;
+  margin: 0;
+}
+.footer-disclaimer strong {
+  color: #d9534f; /* Un rojo suave de advertencia */
+}
+
+/* --- Estilos para los Iconos Sociales --- */
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+/* Estilo para los botones de íconos.
+  Usamos tu color verde para conectar con el tema.
+*/
+.footer-social a.mat-mdc-icon-button {
+  background-color: #e0f2f1; /* Verde pálido */
+  color: #07925d; /* Tu verde principal */
+  transition: all 0.3s ease;
+}
+
+.footer-social a.mat-mdc-icon-button:hover {
+  background-color: #07925d;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos para el Copyright --- */
+.footer-copyright p {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Icono de corazón */
+.footer-copyright mat-icon {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  color: #e91e63; /* Tu color rosa/rojo */
+}
+
+
+/*Media Queries para Responsividad */
+
 .footer-disclaimer p {
   font-size: 0.85rem; /* Ligeramente más pequeño para que no compita */
   color: #777;
@@ -93,19 +146,8 @@
 
 
 /* Para pantallas de escritorio (más de 768px) */
-@media (min-width: 768px) {
-  .footer-content {
-    /* En escritorio, podemos poner redes y copyright en fila si quisieras, 
-       pero para este diseño centrado, mantener la columna suele ser más limpio.
-       Sin embargo, aumentamos el espacio para que respire más. */
-    padding: 1rem 2rem;
-    gap: 2rem;
-  }
 
-  .footer-disclaimer p {
-    font-size: 0.9rem; /* Texto un poco más grande en escritorio */
-  }
-}
+ 
 
 /* Para móviles pequeños (menos de 360px) */
 @media (max-width: 360px) {
@@ -114,7 +156,10 @@
   }
   
   .footer-social {
-    gap: 0.75rem; /* Juntamos un poco los iconos */
+     display: flex;
+  gap: 0.50rem; /* 16px */
+  align-items: center;
+  justify-content: center;
   }
   
   .footer-copyright p {
@@ -122,4 +167,6 @@
     flex-direction: column; /* Apilamos el texto del copyright si es necesario */
     gap: 0.25rem;
   }
+
+  
 }
