@@ -1,6 +1,72 @@
-.title{
-    margin-left: 2rem;
-    font-size: 1.8rem;
-    font-weight: 600;
+/* src/app/layout/header/header.css */
 
+/* 1. Estilos Base de la Barra (Desktop first) */
+.main-toolbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  
+  /* Altura fija en REM (64px) */
+  height: 4rem; 
+  min-height: 4rem;
+  
+  /* Alineación */
+  display: flex;
+  align-items: center;
+  padding: 0 1rem; /* 16px de padding lateral */
+  
+  /* Sombra suave para que se distinga del contenido */
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1); 
+}
+
+/* 2. Estilo del Título */
+.title {
+  margin-left: 1rem; /* Espacio entre el botón y el texto */
+  font-weight: 700; /* Fuente más gruesa para legibilidad */
+  font-size: 1.25rem; /* 20px */
+  letter-spacing: 0.03rem; /* Un poco de aire entre letras */
+  
+  /* Seguridad para pantallas muy pequeñas: */
+  white-space: nowrap; /* Evita que el texto se rompa feo */
+  overflow: hidden;    /* Oculta si se sale */
+  text-overflow: ellipsis; /* Pone "..." si no cabe */
+}
+
+/* ========================================
+   MEDIA QUERIES (RESPONSIVE)
+======================================== 
+*/
+
+/* Para Tablets y Móviles Grandes (< 768px) */
+@media (max-width: 768px) {
+  .main-toolbar {
+    /* Reducimos la altura en móviles (56px) */
+    height: 3.5rem;
+    min-height: 3.5rem;
+    padding: 0 0.75rem;
+  }
+
+  .title {
+    font-size: 1.1rem; /* Reducimos un poco la fuente */
+    margin-left: 0.75rem;
+  }
+}
+
+/* Para Móviles Pequeños (360px o menos) */
+@media (max-width: 360px) {
+  .main-toolbar {
+    padding: 0 0.5rem; /* Maximizamos el espacio lateral */
+  }
+
+  .title {
+    font-size: 0.95rem; /* ~15px: Tamaño crítico para que quepa "Botiquín..." */
+    margin-left: 0.5rem;
+  }
+  
+  /* Opcional: Ajustar el botón de menú si es necesario */
+  button[mat-icon-button] {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+  }
 }
