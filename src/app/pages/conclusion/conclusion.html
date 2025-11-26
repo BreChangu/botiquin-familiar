@@ -1,154 +1,147 @@
 <mat-card class="page-card">
-  <mat-card-header>
-    <mat-card-title>
-      <h2>5. Conclusión: Una práctica diaria, no una meta</h2>
-    </mat-card-title>
-  </mat-card-header>
-  
-  <mat-card-content>
-    
-    <p>
-      Has completado el Botiquín Emocional. Recuerda: La <strong>clave no es la perfección, es la reparación</strong>. Los patrones de silencio de una vida no se rompen en un día. Lo importante es que hoy diste el primer paso de consciencia y adquiriste las herramientas necesarias para reescribir tu historia familiar.
-    </p>
-
-    <hr class="section-separator">
-    <h3>El Viaje de Transformación: De la Herida a la Conexión</h3>
-    <div class="summary-points-container">
-        
-        <mat-card class="summary-card">
-            <mat-card-content>
-                <mat-icon color="warn">visibility</mat-icon>
-                <h4>1. Consciencia (Diagnóstico)</h4>
-                <p>Aprendiste que el problema no eres tú, sino el patrón heredado de la invalidación. Ya no podrás "desver" estas frases.</p>
-            </mat-card-content>
-        </mat-card>
-
-        <mat-card class="summary-card">
-            <mat-card-content>
-                <mat-icon color="primary">cached</mat-icon>
-                <h4>2. Reseteo (Antídoto)</h4>
-                <p>Tienes la Tabla de Antídotos y el Kit de Reseteo. Sabes que puedes equivocarte y que lo importante es reparar el diálogo.</p>
-            </mat-card-content>
-        </mat-card>
-
-        <mat-card class="summary-card">
-            <mat-card-content>
-                <mat-icon color="accent">check_circle_outline</mat-icon>
-                <h4>3. Acción (Implementación)</h4>
-                <p>La validación es una habilidad. Tienes un plan semanal de hábitos concretos para practicar la escucha activa y la validación.</p>
-            </mat-card-content>
-        </mat-card>
-    </div>
-
-    <hr class="section-separator">
-    <div class="final-commitment">
-        <h3>Tu Compromiso de Cierre</h3>
-        <p class="commitment-text">
-            "Me comprometo a ser <strong>paciente</strong> conmigo mismo/a y con mi familia. Elijo <strong>reparar</strong> el vínculo en lugar de dejar que el silencio gane, un paso a la vez."
-        </p>
-    </div>
-    
-    <div class="launchpad-message">
-        <p>
-            No cierres este manual pensando que es el final. <strong>Este es solo el mapa</strong> que obtuviste antes de cruzar la puerta. El verdadero trabajo empieza ahora, en la vida cotidiana.
-            <br>
-            La <strong>Conexión Familiar</strong> no es un destino; es la <strong>ruta</strong> que eliges cada mañana.
-        </p>
-    </div>
-    
-    <mat-card class="companion-note-card">
-        <mat-card-content>
-            <h4>✍️ Una Nota Final del Psicólogo</h4>
-            <p>
-                "Recuerda que no estás solo en este camino. Sentirás frustración y dudarás, y eso es normal. <strong>No te juzgues.</strong> Simplemente, usa tu Kit de Reseteo y vuelve a intentarlo. Te deseo paciencia y mucha luz en este viaje de reparación."
-            </p>
-            <cite>— Tu Botiquín de Apoyo</cite>
-        </mat-card-content>
-    </mat-card>
-    
-    <hr class="section-separator">
-    <mat-card class="daily-anchor-card">
-        <mat-card-title>Un Anclaje para tu Viaje</mat-card-title>
-        <mat-card-content>
-            <p class="anchor-text">
-                {{ dailyAnchor }}
-            </p>
-            <button 
-                mat-raised-button 
-                color="warn" 
-                (click)="generateDailyAnchor()">
-                Recibir Frase de Apoyo
-            </button>
-        </mat-card-content>
-    </mat-card>
-
-  <div class="download-section">
-    <h3>Descarga tu Toolkit de Reparación 📥</h3>
+  <mat-card-header>
+    <mat-card-title>
+      <h2>5. Conclusión: Una práctica diaria, no una meta</h2>
+    </mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+    
     <p>
-        Lleva la práctica contigo. Estos recursos están diseñados para ser impresos y usados como un ancla visual en tu día a día.
+      Has completado el Botiquín Emocional. Recuerda: La <strong>clave no es la perfección, es la reparación</strong>. Los patrones de silencio de una vida no se rompen en un día. Lo importante es que hoy diste el primer paso de consciencia y adquiriste las herramientas necesarias para reescribir tu historia familiar.
     </p>
 
-    <div class="download-container">
-        <mat-card 
-          *ngFor="let item of downloadables" 
-          class="download-card">
-            
-            <mat-card-header>
-                <mat-icon mat-card-avatar color="warn">{{ item.icon }}</mat-icon>
-                <mat-card-title>{{ item.name }}</mat-card-title>
-            </mat-card-header>
-            
+    <hr class="section-separator">
+    <h3>El Viaje de Transformación: De la Herida a la Conexión</h3>
+    <div class="summary-points-container">
+        
+        <mat-card class="summary-card">
             <mat-card-content>
-                <p>{{ item.description }}</p>
+                <mat-icon color="warn">visibility</mat-icon>
+                <h4>1. Consciencia (Diagnóstico)</h4>
+                <p>Aprendiste que el problema no eres tú, sino el patrón heredado de la invalidación. Ya no podrás "desver" estas frases.</p>
             </mat-card-content>
-            
-            <mat-card-actions>
-    <a [href]="'/assets/' + item.file" [download]="item.file">
-        <button mat-raised-button color="accent">
-            <mat-icon>file_download</mat-icon> Descargar PDF
-        </button>
-    </a>
-</mat-card-actions>
+        </mat-card>
+
+        <mat-card class="summary-card">
+            <mat-card-content>
+                <mat-icon color="primary">cached</mat-icon>
+                <h4>2. Reseteo (Antídoto)</h4>
+                <p>Tienes la Tabla de Antídotos y el Kit de Reseteo. Sabes que puedes equivocarte y que lo importante es reparar el diálogo.</p>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="summary-card">
+            <mat-card-content>
+                <mat-icon color="accent">check_circle_outline</mat-icon>
+                <h4>3. Acción (Implementación)</h4>
+                <p>La validación es una habilidad. Tienes un plan semanal de hábitos concretos para practicar la escucha activa y la validación.</p>
+            </mat-card-content>
         </mat-card>
     </div>
-</div>
 
-    <hr class="section-separator">
+    <hr class="section-separator">
+    <div class="final-commitment">
+        <h3>Tu Compromiso de Cierre</h3>
+        <p class="commitment-text">
+            "Me comprometo a ser <strong>paciente</strong> conmigo mismo/a y con mi familia. Elijo <strong>reparar</strong> el vínculo en lugar de dejar que el silencio gane, un paso a la vez."
+        </p>
+    </div>
+    
+    <div class="launchpad-message">
+        <p>
+            No cierres este manual pensando que es el final. <strong>Este es solo el mapa</strong> que obtuviste antes de cruzar la puerta. El verdadero trabajo empieza ahora, en la vida cotidiana.
+            <br>
+            La <strong>Conexión Familiar</strong> no es un destino; es la <strong>ruta</strong> que eliges cada mañana.
+        </p>
+    </div>
+    
+    <mat-card class="companion-note-card">
+        <mat-card-content>
+            <h4>✍️ Una Nota Final del Psicólogo</h4>
+            <p>
+                "Recuerda que no estás solo en este camino. Sentirás frustración y dudarás, y eso es normal. <strong>No te juzgues.</strong> Simplemente, usa tu Kit de Reseteo y vuelve a intentarlo. Te deseo paciencia y mucha luz en este viaje de reparación."
+            </p>
+            <cite>— Tu Botiquín de Apoyo</cite>
+        </mat-card-content>
+    </mat-card>
+    
+    <hr class="section-separator">
+    <mat-card class="daily-anchor-card">
+        <mat-card-title>Un Anclaje para tu Viaje</mat-card-title>
+        <mat-card-content>
+            <p class="anchor-text">
+                {{ dailyAnchor }}
+            </p>
+            <button 
+                mat-raised-button 
+                color="warn" 
+                (click)="generateDailyAnchor()">
+                Recibir Frase de Apoyo
+            </button>
+        </mat-card-content>
+    </mat-card>
 
-    <div class="immediate-support-section">
-        <h3>Tu Red de Apoyo Inmediato</h3>
-        <p>
-            Si necesitas ayuda ahora mismo o te sientes sobrepasado, haz clic en el botón de abajo. No estás solo.
-        </p>
+    <!-- SECCIÓN DE DESCARGA -->
+    <div class="download-section">
+      <h3>Descarga tu Toolkit de Reparación 📥</h3>
+      <p>
+          Lleva la práctica contigo. Estos recursos están diseñados para ser impresos y usados como un ancla visual en tu día a día.
+      </p>
 
-        <button 
-          mat-raised-button 
-          class="crisis-button" 
-          (click)="window.open('tel:911', '_self')">
-            <mat-icon>call</mat-icon>
-            <span>Línea de Crisis y Apoyo Inmediato</span>
-            <span class="crisis-number">911</span>
-        </button>
-    </div>
+      <div class="download-container">
+          <mat-card *ngFor="let item of downloadables" class="download-card">
+              <mat-card-header>
+                  <mat-icon mat-card-avatar color="warn">{{ item.icon }}</mat-icon>
+                  <mat-card-title>{{ item.name }}</mat-card-title>
+              </mat-card-header>
+              
+              <mat-card-content>
+                  <p>{{ item.description }}</p>
+              </mat-card-content>
+              
+              <mat-card-actions>
+                  <button mat-raised-button color="accent" 
+                          (click)="downloadPDF(item.file, item.name)">
+                      <mat-icon>file_download</mat-icon> Descargar PDF
+                  </button>
+              </mat-card-actions>
+          </mat-card>
+      </div>
+    </div>
 
-    <hr class="section-separator">
+    <hr class="section-separator">
 
-    <h3>Profundiza en tu Entrenamiento</h3>
-    <div class="resource-container">
-        <mat-card 
-          *ngFor="let resource of externalResources" 
-          class="resource-card interactive" 
-          (click)="window.open(resource.url, '_blank')">
-            <mat-card-header>
-                <mat-icon mat-card-avatar color="primary">{{ resource.icon }}</mat-icon>
-                <mat-card-title>{{ resource.name }}</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <p>{{ resource.description }}</p>
-                <span class="resource-action-text">Haz clic para ir al sitio</span>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    
-  </mat-card-content>
-</mat-card>
+    <div class="immediate-support-section">
+        <h3>Tu Red de Apoyo Inmediato</h3>
+        <p>
+            Si necesitas ayuda ahora mismo o te sientes sobrepasado, haz clic en el botón de abajo. No estás solo.
+        </p>
+
+        <button 
+          mat-raised-button 
+          class="crisis-button" 
+          (click)="callCrisisLine()">
+            <mat-icon>call</mat-icon>
+            <span>Línea de Crisis y Apoyo Inmediato</span>
+            <span class="crisis-number">911</span>
+        </button>
+    </div>
+
+    <hr class="section-separator">
+
+    <h3>Profundiza en tu Entrenamiento</h3>
+    <div class="resource-container">
+        <mat-card 
+          *ngFor="let resource of externalResources" 
+          class="resource-card interactive" 
+          (click)="openExternal(resource.url)">
+            <mat-card-header>
+                <mat-icon mat-card-avatar color="primary">{{ resource.icon }}</mat-icon>
+                <mat-card-title>{{ resource.name }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{ resource.description }}</p>
+                <span class="resource-action-text">Haz clic para ir al sitio</span>
+            </mat-card-content>
+       
